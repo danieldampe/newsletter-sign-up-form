@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/normalize.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <!-- HTML -->
+    <div id="root">
+        <main class="modal">
+            <picture class="modal__picture">
+                <source 
+                    media="(min-width: 1000px)" 
+                    srcset="./assets/images/illustration-sign-up-desktop.svg"
+                >
+                <img src="./assets/images/illustration-sign-up-mobile.svg" alt="image">
+            </picture>
+            <div class="modal__text">
+                <h1 class="modal-text__h1">Stay updated!</h1>
+                <p class="modal-text__p">
+                    Join 60.000+ product managers receiving monthly updates on:
+                </p>
+                <ul class="modal-text__ul">
+                    <li class="modal-text-ul__li">
+                        Product discovery and building what matters
+                    </li>
+                    <li class="modal-text-ul__li">Measuring to ensure updates are a sucess</li>
+                    <li class="modal-text-ul__li">And much more!</li>
+                </ul>
+                <div class="modal-text__div">
+                    <span>Email address</span>
+                    <span class="modal-text-div__msg-error none" id="msg-error">
+                        Valid email required
+                    </span>
+                </div>
+                <input class="modal-text__input" type="email" name="email" id="email-input" placeholder="email@company.com">
+                <button class="modal-text__button button-1" id="submit-button">Subscribe to monthly newsletter</button>
+            </div>
+        </main>
+        <div class="modal-window none" id="modal-sucess">
+            <div class="modal-sucess">
+                <img class="modal-sucess__img" src="./assets/images/icon-success.svg" alt="Icon Sucess">
+                <h2 class="modal-sucess__h2">Thanks for subscribing!</h2>
+                <p class="modal-sucess__p">
+                    A confirmation email has been sent to 
+                    <b class="modal-sucess-p__b" id="email-span"></b>. 
+                    Please open it and click the button inside to confirm your subscription
+                </p>
+                <button class="modal-sucess__button button-1" id="dismiss-button">Dismiss message</button>
+            </div>
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
